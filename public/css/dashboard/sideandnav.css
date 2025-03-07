@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+::after,
+::before{
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body{
+  font-family: "Montserrat", serif;
+  font-size: 0.875rem;
+  opacity: 1;
+  overflow-y: scroll;
+  margin: 0;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Montserrat", serif;
+}
+
+li{
+  list-style: none;
+}
+
+h4{
+  font-family: "Montserrat", serif;
+  font-size: 1.275rem;
+  color: var(--bs-emphasis-color);
+}
+
+.wrapper {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
+
+#sidebar{
+  max-width: 264px;
+  min-width: 264px;
+  background-color: var(--bs-dark);
+  transition: all 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  width: 100%;
+  background: var(--bs-dark-bg-subtle);
+}
+
+.sidebar-logo{
+  padding: 1.15rem;
+}
+
+.sidebar-logo a{
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sidebar-nav{
+  flex-grow: 1;
+  list-style: none;
+  padding-top: 80px;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.sidebar-item{
+    padding-top: 10px;
+}
+
+.sidebar-logo,
+.sidebar-nav{
+  position: fixed;
+  margin-left: 12px;
+}
+
+
+.sidebar-header{
+  color: white;
+  font-size: .75rem;
+  padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link{
+  padding: .625rem 1.625rem;
+  color: white;
+  position: relative;
+  display: block;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after{
+  border: solid;
+  border-width: 0 .075rem .075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.25rem;
+  top: 1rem;
+  transform: rotate(-135deg);
+  transition: all .2s ease-out;
+}
+
+
+.sidebar-link.active{
+    background-color: #6c63ff;
+
+    border-radius: 20px;
+}
+
+.sidebar-link:hover{
+    background-color: #6c63ff;
+    border-radius: 20px;
+}
+
+
+.sidebar-link i{
+  margin-right: 2px;
+}
+
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after{
+  transform: rotate(45deg);
+  transition: all.2s ease-out;
+}
+
+.avatarhead {
+  width: 40px;       /* Ukuran gambar */
+  height: 40px;      /* Menjamin tinggi gambar sama dengan lebar untuk bulat sempurna */
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  object-fit: cover;  /* Menjaga gambar tetap proporsional */
+}
+
+.avatar {
+  display: inline-block;
+}
+
+.avatar.active {
+  border: 3px solid #6c63ff; /* Border biru */
+  border-radius: 50%; 
+  padding: 0px;           /* Memberikan ruang antara gambar dan border */
+  box-sizing: border-box; /* Memastikan border tidak mempengaruhi ukuran gambar */
+}
+
+.navbar{
+  background-color: #212529;
+}
+
+.dropdown-menu{
+  border-radius: 5px !important;
+  background-color:#2125296b !important;
+  backdrop-filter: blur(1px) !important;
+}
+
+.navbar-expand .navbar-nav{
+  margin-left: auto;
+}
+
+.dropdown-item{
+  margin-top: 5px;
+}
+
+.dropdown-item.active{
+  background-color: #6c63ff;
+
+  border-radius: 20px;
+}
+
+.dropdown-item:hover{
+  background-color: #6c63ff !important;
+  border-radius: 20px;
+}
+
+#sidebar-toggle{
+    color: white;
+    font-size: 25px;
+  }
+  
+  #sidebar.collapsed{
+    margin-left: -264px;
+  }
+  
+  /* footer and Nav*/
+  
+  .footer a{
+    text-decoration: none;
+  }
+  
+  @media(max-width:767.98px){
+    .navbar,
+    footer{
+      width: 100vw;
+    }
+  }
+  
+  /* theme */
+
+/* Theme Switch Container */
+.theme-switch {
+  position: fixed;
+  bottom: 40px;
+  left: 70px;
+  width: 110px; /* Lebar diperbesar */
+  height: 40px; /* Tinggi disesuaikan */
+  display: inline-block;
+  z-index: 99;
+}
+
+/* Sembunyikan input checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Desain Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px; /* Tinggi slider */
+  width: 110px; /* Lebar slider */
+  background: url('../../img/assets/2.svg'); /* Tambahkan gambar latar */
+  background-size: cover;
+  transition: background 0.4s ease-in-out;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 .875rem 0 rgba(0, 119, 255, 0.233) !important;
+}
+
+/* Ikon Bulan & Matahari */
+.moon-icon, .sun-icon {
+  font-size: 1.25rem; /* Perkecil agar sesuai ukuran */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.4s ease-in-out, opacity 0.3s;
+}
+
+/* Warna ikon tetap */
+.moon-icon {
+  color: white; /* Kuning */
+  left: 10px; /* Posisikan agar lebih tengah */
+  opacity: 0;
+}
+
+.sun-icon {
+  color: gray; /* Hitam */
+  left: 10px;
+  opacity: 1;
+}
+
+/* Saat Dark Mode */
+input:checked + .slider {
+  background: url('../../img/assets/1.svg'); /* Ganti dengan gambar dark mode */
+  background-size: cover;
+}
+
+/* Animasi ikon bergerak ke kanan */
+input:checked + .slider .moon-icon {
+  transform: translate(70px, -50%);
+  opacity: 1;
+}
+
+input:checked + .slider .sun-icon {
+  transform: translate(70px, -50%);
+  opacity: 0;
+}
+
+/* Teks Light & Dark */
+.theme-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000; /* Warna teks */
+  margin: 0 8px; /* Jarak dari slider */
+}
+
+/* Warna teks saat dark mode */
+.theme-label {
+  color: #fff;
+}
+
+/* Posisi teks */
+.light-label {
+  position: absolute;
+  left: -52px;
+  top: 110%;
+  transform: translateY(-50%);
+}
+
+.dark-label {
+  position: absolute;
+  right: -48px;
+  top: 110%;
+  transform: translateY(-50%);
+}

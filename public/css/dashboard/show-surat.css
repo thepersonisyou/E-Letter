@@ -1,0 +1,12 @@
+.card {
+    box-shadow: 0 0 .875rem 0 rgba(0, 119, 255, 0.233);
+    margin-bottom: 24px;
+  }
+  
+button.kembali{
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem !important;
+}
+
+i{
+  padding-right: 10px;
+}

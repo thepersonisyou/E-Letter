@@ -1,0 +1,122 @@
+/* Styling untuk tabel dan card */
+.alert.alert-success.alert-dismissible.fade.show.m-0{
+  margin-bottom: 20px !important;
+}
+
+.alert {
+  width: 30%; /* Lebar alert 30% */
+
+  padding: 4px 10px; /* Sedikit lebih besar untuk proporsi */
+  font-size: 0.75rem; /* Perkecil font */
+  line-height: 1; /* Kurangi tinggi baris */
+  min-height: 24px; /* Sesuaikan tinggi */
+  display: flex;
+  align-items: center; /* Pusatkan vertikal */
+  justify-content: space-between; /* Jarak antara teks dan tombol */
+}
+
+.alert i {
+  font-size: 0.8rem; /* Perkecil ikon */
+  margin-right: 5px; /* Jarak ikon ke teks */
+}
+
+.alert .btn-close {
+  margin-top: -4px;
+  padding: 0; /* Hilangkan padding default */
+}
+
+
+
+
+
+select,input{
+  box-shadow: 0 0 .875rem 0 rgba(0, 119, 255, 0.233);
+}
+
+.table-responsive.card {
+  box-shadow: 0 0 .875rem 0 rgba(0, 119, 255, 0.233);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th{
+  font-size: 10px;
+}
+
+
+.table th {
+  background-color: #343a40;
+  color: white;
+}
+
+.table td img {
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Info jumlah kolom */
+
+
+.column-info {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.pagination{
+  margin-right: 10px;
+}
+
+/* Pagination Styling */
+.pagination .page-item .page-link {
+  color: #007bff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #ccc;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .d-flex.justify-content-between {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .column-info {
+      margin-bottom: 10px;
+      text-align: center;
+  }
+
+  .pagination .page-item .page-link {
+      font-size: 10px;
+      padding: 3px 6px;
+  }
+}
+

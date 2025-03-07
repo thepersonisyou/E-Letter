@@ -1,0 +1,70 @@
+.profile-container {
+    padding: 20px;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    border-radius: 10px;
+    box-shadow: 0 0 .875rem 0 rgba(0, 119, 255, 0.233) !important;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 20px;
+    object-fit: cover;
+    position: relative;
+    top: -20px;
+}
+.profile-info {
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.profile-info p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.profile-info p i {
+    color: var(--bs-primary);
+}
+.profile-header {
+    background: var(--bs-primary);
+    color: var(--bs-light);
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.edit-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: var(--bs-primary);
+    color: var(--bs-light);
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    align-self: start;
+}
+
+/* Dark mode specific styles */
+[data-bs-theme="dark"] .profile-container {
+    background: #1e1e1e !important;
+    color: #fff !important;
+    box-shadow: 0 0 .875rem 0 rgba(0, 119, 255, 0.233) !important;
+}
+[data-bs-theme="dark"] .profile-info p {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}

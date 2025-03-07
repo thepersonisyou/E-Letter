@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.custom-alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative;
+    z-index: 9999;
+    width: auto;
+    height: 40px;
+    float: right;
+}
+.custom-alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.custom-alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* .custom-alert {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+    position: relative;
+    z-index: 9999;
+    width: auto;
+    height: 40px;
+    float: right;
+}
+
+
+
+.custom-alert p{
+    margin-right: 20px;
+}
+
+.custom-alert i{
+    margin-right: 20px;
+}
+
+.custom-alert .close-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #155724;
+    cursor: pointer;
+}
+
+.custom-alert .close-btn:hover {
+    color: #721c24;
+} */
+
+.nav .white{
+    position: relative;
+    transform: translateY(15%);
+    right: -1%;
+    z-index: 100;
+    opacity: 100%;
+    transition: 1.8s ease-in-out;
+}
+
+.container.sign-up-mode .nav .white{
+    opacity: 0%;
+}
+
+.nav .blue{
+    position: relative;
+    transform: translateY(-85%);
+    right: -1%;
+    z-index: 100;
+    opacity: 0%;
+    transition: 1.8s ease-in-out;
+}
+
+.container.sign-up-mode .nav .blue{
+    opacity: 100%;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    overflow: hidden;
+}
+
+.container:before{
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #6c63ff, #3b31fc);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    z-index: 6;
+    transition: 1.8s ease-in-out;
+}
+
+.forms-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.signin-signup{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+    transition: 1s 0.7s ease-in-out;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5rem;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transition: .9s .6s ease-in-out;
+}
+
+form.sign-in-form{
+    z-index: 2;
+}
+
+.alert{
+    background: #842029;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    overflow: hidden;
+    right: 0px;
+    top: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #fa8f98;
+}
+
+.alert .fa-exclamation-circle{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #fa8f98;
+    
+}
+
+.alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: #fa8f98;
+}
+
+.alert .close-btn{
+    position: absolute;
+    background: #fa8f98;
+    padding: 20px 18px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    background: #dd7f87;
+}
+
+.close-btn .fa-times{
+    color: #842029;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+/* 521 */
+
+/* .signin-signup .alert p{
+} */
+
+
+form.sign-up-form{
+    z-index: 1;
+    opacity: 0;
+}
+
+
+.title{
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.input-field{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 .4rem;
+}
+
+.input-field i{
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    font-size: 1.1rem;
+}
+
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.input-field input::placeholder{
+    color: #aaa;
+    font-weight: 500;
+}
+
+.btn{
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #5995fd;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+.btn:hover{
+    background-color: #4d84e2;
+    color: #ffffff;
+}
+
+.panels-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 7;
+}
+
+.left-panel{
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel{
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content{
+    color: #fff;
+    transition: .9s.6s ease-in-out;
+}
+
+.panel h3{
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.panel p{
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+
+.btn.transparent{
+    margin: 0;
+    background: none;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.btn.transparent:hover{
+    background: #fff;
+    color: #4d84e2;
+}
+
+.image{
+    width: 100%;
+    transition: 1.1s .4s ease-in-out;
+}
+
+.right-panel .content, .right-panel .image{
+    transform: translateX(800px);
+}
+
+/* animasi */
+
+
+.container.sign-up-mode:before{
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content{
+    transform: translateX(-800px);
+}
+
+.container.sign-up-mode .right-panel .content,
+.container.sign-up-mode .right-panel .image{
+    transform: translateX(0px);
+}
+
+.container.sign-up-mode .left-panel{
+    pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel{
+    pointer-events: all;
+}
+
+.container.sign-up-mode .signin-signup{
+    left: 25%;
+}
+
+.container.sign-up-mode form.sign-in-form{
+    z-index: 1;
+    opacity: 0;
+}
+
+.container.sign-up-mode form.sign-up-form{
+    z-index: 2;
+    opacity: 1;
+}
+
+@media (max-width: 870px){
+    .container{
+        min-height: 800px;
+        height: 100vh;
+    }
+
+    .container:before{
+        width: 1500px;
+        height: 1500px;
+        left: 30%;
+        bottom: 68%;
+        transform: translateX(-50%);
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
+
+    .signin-signup{
+        width: 100%;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -100%);
+        transition: 1s 0.8s ease-in-out;
+    }
+
+    .panels-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .panel{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.5rem 8%;
+    }
+
+    .panel .content{
+        padding-right: 15%;
+        transition: 0.9s 0.8s ease-in-out;
+    }
+
+    .panel h3{
+        font-size: 1.2rem;
+    }
+
+    .panel p{
+        font-size: 0.7rem;
+        padding: 0.5rem 0;
+    }
+
+    .btn.transparent{
+        width: 110px;
+        height: 35px;
+        font-size: 0.7rem;
+    }
+
+    .image{
+        width: 200px;
+        transition: 0.9s 0.6s ease-in-out;
+    }
+
+    .left-panel{
+        grid-row: 1 / 2;
+    }
+
+    .right-panel{
+        grid-row: 3 / 4;
+    }
+
+    .right-panel .content, .right-panel .image{
+        transform: translateY(300px);
+    }
+
+    .container.sign-up-mode:before{
+        transform: translate(-50%, 100%);
+        bottom: 32%;
+        right: initial;
+    }
+
+    .container.sign-up-mode .left-panel .image,
+    .container.sign-up-mode .left-panel .content{
+        transform: translateY(-300px);
+    }
+
+    .container.sign-up-mode .signin-signup{
+        top: 15%;
+        transform: translate(-50%, 0);
+        left: 50%;
+    }
+}
+
+@media (max-width:570px){
+    form{
+        padding: 0 1.5rem;
+    }
+
+    .image{
+        display: none;
+    }
+
+    .panel .content{
+        padding: 0.5rem 1rem;
+    }
+
+    .container:before{
+        bottom: 72%;
+        left: 50%;
+    }
+
+    .container .sign-up-mode:before{
+        bottom: 20%;
+        left: 50%;
+    }
+
+}
+
+.sign-up-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tetap dua kolom */
+    gap: 8px; /* Mengurangi jarak antar elemen */
+    max-width: 500px; /* Perkecil ukuran form agar lebih kompak */
+    margin: auto;
+}
+
+.sign-up-form h2 {
+    grid-column: span 2;
+    text-align: center;
+}
+
+/* Styling input field agar lebih kecil */
+.input-field {
+    display: flex;
+    align-items: center;
+    background: #e4e4e4be;
+    padding: 6px; /* Kurangi padding */
+    border-radius: 4px; /* Perkecil radius */
+}
+
+.input-field select{
+    font-weight: 500;
+}
+
+.input-field i {
+    margin-right: 6px; /* Kurangi jarak ikon */
+    color: #666;
+    font-size: 14px; /* Perkecil ikon */
+}
+
+.input-field input,
+.input-field select {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 14px; /* Perkecil ukuran teks */
+    padding: 4px; /* Kurangi padding */
+    outline: none;
+}
+
+/* Menengahkan tombol */
+.button-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling tombol */
+.signbtn {
+    padding: 8px 16px; /* Kurangi ukuran tombol */
+    font-size: 14px; /* Perkecil teks tombol */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signbtn:hover {
+    background-color: #0056b3;
+}
+
+/* RESPONSIVE: Saat layar lebih kecil dari 570px */
+@media (max-width: 570px) {
+    .sign-up-form {
+        grid-template-columns: repeat(2, 1fr); /* Tetap dua kolom */
+        max-width: 100%; /* Biarkan form menyesuaikan layar */
+    }
+
+    .input-field {
+        padding: 5px; /* Perkecil padding pada layar kecil */
+    }
+
+    .input-field input,
+    .input-field select {
+        font-size: 12px; /* Perkecil font agar tetap rapi */
+        padding: 3px;
+    }
+
+    .signbtn {
+        font-size: 12px;
+        padding: 6px 12px; /* Perkecil tombol */
+    }
+}
